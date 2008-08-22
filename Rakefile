@@ -1,7 +1,11 @@
 require 'rake'
-
+# added comment
 desc "install the dot files into user's home directory"
 task :install do
+  name = `git config --global user.name`.strip
+  email = `git config --global user.email`.strip
+
+  # git config --global user.name "Lawrence"
   replace_all = false
   Dir['*'].each do |file|
     next if %w[Rakefile README LICENSE].include? file
@@ -27,6 +31,24 @@ task :install do
       link_file(file)
     end
   end
+    
+  puts "Name: (#{name})"
+  new_name = STDIN.gets.strip
+  
+  puts "Email: (#{email})"
+  new_email = STDIN.gets.strip
+  
+  if new_email == ""
+    new_email = email
+  end
+  
+  if new_name == ""
+    new_name = name
+  end
+
+  `git config --global user.name "#{new_name}"`
+  `git config --global user.email "#{new_email}"`
+
 end
 
 def replace_file(file)
