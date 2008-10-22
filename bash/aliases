@@ -1,7 +1,11 @@
 . ~/.zsh/aliases
 
-# changing directory to code project
-function c { cd ~/code/$1; }
+function c { cd ~/Development/$1; }
 
 # misc
 alias reload='. ~/.bash_profile'
+alias flush='dscacheutil -flushcache'
+
+
+# Rails
+alias spec='spec --color'

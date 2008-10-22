@@ -1,6 +1,6 @@
 [user]
-	name = Ryan Bates
-	email = ryan@railscasts.com
+	name = Zach Holman
+	email = git@email
 [alias]
 	co = checkout
 [color]
@@ -8,7 +8,7 @@
 	status = auto
 	branch = auto
 [core]
-	excludesfile = /Users/rbates/.gitignore
+	excludesfile = /Users/zach/.gitignore
 	editor = mate -w
 [apply]
 	whitespace = nowarn
