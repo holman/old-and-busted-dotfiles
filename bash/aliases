@@ -6,6 +6,5 @@ function c { cd ~/Development/$1; }
 alias reload='. ~/.bash_profile'
 alias flush='dscacheutil -flushcache'
 
-
 # Rails
 alias spec='spec --color'
