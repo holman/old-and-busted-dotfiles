@@ -11,3 +11,15 @@ alias spec='spec --color'
 
 # Ruby
 alias gems='cd /Library/Ruby/Gems/1.8/gems'
+
+vimgem() {
+  vim $GEMDIR/gems/`$(which ls) $GEMDIR/gems | grep -x $1.* | sort | tail -1`/
+}
+
+emacsgem() {
+  emacs $GEMDIR/gems/`$(which ls) $GEMDIR/gems | grep -x $1.* | sort | tail -1`/
+}
+
+mategem() {
+  mate $GEMDIR/gems/`$(which ls) $GEMDIR/gems | grep -x $1.* | sort | tail -1`/
+}
