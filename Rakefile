@@ -32,10 +32,10 @@ task :install do
     end
   end
     
-  puts "Name: (#{name})"
+  puts "Name: (leave blank to default to '#{name}')"
   new_name = STDIN.gets.strip
   
-  puts "Email: (#{email})"
+  puts "Email: (leave blank to default to '#{email}')"
   new_email = STDIN.gets.strip
   
   if new_email == ""
