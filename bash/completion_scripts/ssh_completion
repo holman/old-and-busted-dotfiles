@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+class SSHCompletion
+  def initialize(command)
+    @command = command
+  end
+  
+  def matches
+    hosts.select do |task|
+      task[0, typed.length].downcase == typed.downcase
+    end
+  end
+  
+  def typed
+    @command[/\s(.+?)$/, 1] || ''
+  end
+  
+  def hosts
+    File.read(File.expand_path('~/.ssh/config')).grep(/Host\ /).
+      map { |e| e.strip.match(/Host (.+)/)[1] }
+  end
+end
+
+puts SSHCompletion.new(ENV["COMP_LINE"]).matches
+exit 0
