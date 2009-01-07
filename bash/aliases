@@ -9,6 +9,7 @@ gitdemote() {
   git branch -d $branch
   git push origin :heads/$branch
 }
+alias gundo='git reset --soft HEAD^'
 
 # misc
 alias reload='. ~/.bash_profile'
