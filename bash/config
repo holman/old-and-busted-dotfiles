@@ -1,5 +1,9 @@
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo " •"
+}
+
 parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ \1$(parse_git_dirty)/"
 }
 
 export PS1="\w \[\033[40;37m\]\$(parse_git_branch) \[\033[00m\] $\[\033[00m\] "
