@@ -2,6 +2,15 @@
 
 function c { cd ~/Development/$1; }
 
+# git
+alias git-demote='gitdemote $1'
+gitdemote() {
+  local branch=$1
+  git branch -d $branch
+  git push origin :heads/$branch
+}
+alias gundo='git reset --soft HEAD^'
+
 # misc
 alias reload='. ~/.bash_profile'
 alias flush='dscacheutil -flushcache'
