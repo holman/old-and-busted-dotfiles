@@ -20,6 +20,7 @@ alias spec='spec --color'
 
 # Ruby
 alias gems='cd /Library/Ruby/Gems/1.8/gems'
+alias shoes="open -a Shoes.app"
 
 vimgem() {
   vim $GEMDIR/gems/`$(which ls) $GEMDIR/gems | grep -x $1.* | sort | tail -1`/
