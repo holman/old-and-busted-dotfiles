@@ -22,6 +22,7 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias sc='script/console'
 alias ss='script/server'
 alias sg='script/generate'
+alias sd='script/destroy'
 alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
