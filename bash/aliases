@@ -9,6 +9,10 @@ gitdemote() {
   git branch -d $branch
   git push origin :heads/$branch
 }
+gf() {
+  local branch=$1
+  git checkout -b $branch origin/$branch
+}
 alias gundo='git reset --soft HEAD^'
 
 # misc
