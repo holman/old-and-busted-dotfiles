@@ -37,3 +37,11 @@ emacsgem() {
 mategem() {
   mate $GEMDIR/gems/`$(which ls) $GEMDIR/gems | grep -x $1.* | sort | tail -1`/
 }
+
+# Monitor HTTP requests being made from your machine with a one-liner..
+# Replace "en1" below with your network interface's name (usually en0 or en1)
+# (again replace "en1" with correct network interface name)
+function httpdump() {
+  interface="${1:-en0}"
+  sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"
+}
