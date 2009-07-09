@@ -1,6 +1,9 @@
 #!/usr/bin/ruby
 require 'irb/completion'
 require 'irb/ext/save-history'
+require 'rubygems'
+require 'hirb'
+Hirb.enable
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
