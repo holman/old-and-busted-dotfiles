@@ -21,6 +21,7 @@ alias flush='dscacheutil -flushcache'
 
 # Rails
 alias spec='spec --color'
+alias gi='sudo rake gems:install'
 
 # Ruby
 alias gems='cd /Library/Ruby/Gems/1.8/gems'
