@@ -24,7 +24,7 @@ alias spec='spec --color'
 alias gi='sudo rake gems:install'
 
 # Ruby
-alias gems='cd $GEM_HOME'
+alias gems='cd $GEM_HOME/gems'
 alias shoes="open -a Shoes.app"
 
 vimgem() {
