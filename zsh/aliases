@@ -1,3 +1,6 @@
+# zsh
+alias reload='. ~/.zshrc'
+
 # cd
 alias ..='cd ..'
 
@@ -17,6 +20,9 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# ruby
+alias gems='cd $GEM_HOME/gems'
 
 # rails
 alias sc='script/console'
