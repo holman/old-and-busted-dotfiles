@@ -3,6 +3,9 @@
 	email = git@email
 [alias]
 	co = checkout
+	promote = !~/.dotfiles/zsh/functions/git-promote
+	wtf     = !~/.dotfiles/zsh/functions/git-wtf
+	rank-contributers = !~/.dotfiles/zsh/functions/git-rank-contributers
 [color]
 	diff = auto
 	status = auto
