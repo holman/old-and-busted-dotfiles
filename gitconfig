@@ -6,6 +6,7 @@
 	promote = !~/.dotfiles/zsh/functions/git-promote
 	wtf     = !~/.dotfiles/zsh/functions/git-wtf
 	rank-contributers = !~/.dotfiles/zsh/functions/git-rank-contributers
+	count	= !git shortlog -sn
 [color]
 	diff = auto
 	status = auto
