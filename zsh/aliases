@@ -27,7 +27,7 @@ alias gems='cd $GEM_HOME/gems'
 
 # rails
 alias sc='script/console'
-alias ss='script/server'
+alias ss='script/server -p `~/.dotfiles/zsh/functions/available_rails_port`'
 alias sg='script/generate'
 alias sd='script/destroy'
 alias a='autotest -rails'
