@@ -13,6 +13,7 @@ alias ll="gls -l --color"
 alias la='gls -A --color'
 
 # git
+function git(){hub $@}
 alias gl='git pull'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias glr='git pull --rebase'
