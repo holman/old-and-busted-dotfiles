@@ -1,3 +1,6 @@
+alias dotmate='mate ~/.dotfiles'
+alias dotcd='cd ~/.dotfiles'
+
 # zsh
 alias reload='. ~/.zshrc'
 
