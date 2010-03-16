@@ -10,6 +10,7 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export GEM_HOME="$(brew --prefix)/Cellar/Gems/1.8"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
+export RAILS_ENV=development
 
 fpath=(~/.zsh/functions $fpath)
 
