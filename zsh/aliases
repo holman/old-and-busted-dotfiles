@@ -48,6 +48,7 @@ alias rst='touch tmp/restart.txt'
 alias rcov='rake rcov:all'
 alias s="ps aux | grep \"[r]uby\" | grep script/server || echo \"You're not running any, dawg.\""
 alias deathss='~/.dotfiles/zsh/functions/deathss'
+alias latest-chromium='~/.dotfiles/zsh/bin/latest-chromium'
 
 # commands starting with % for pasting from web
 alias %=' '
